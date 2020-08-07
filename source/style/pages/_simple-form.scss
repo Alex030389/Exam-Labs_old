@@ -1,0 +1,96 @@
+.simple-form__amount {
+  margin-bottom: 1.875rem;
+  line-height: 1.69;
+
+  strong {
+    font-family: GothamPro;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #2b2c30;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 1.875rem;
+    color: #2b2c30;
+    line-height: 1;
+    font-family: GothamPro;
+  }
+}
+
+.simple-form__heading {
+  width: 100%;
+  font-family: GothamPro-Medium;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+  color: #2b2c30;
+  margin-bottom: 1.35rem;
+}
+
+.simple-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.simple-button-submit {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  width: 16.875rem;
+  height: 3.2125rem;
+  border-radius: 6.25rem;
+  background-color: #0fc962;
+  color: #fff;
+  cursor: pointer;
+  min-width: 4.6875rem;
+  transition: filter .3s;
+  align-self: flex-end;
+  font-family: GothamPro-Medium;
+
+  &--link {
+    display: inline-block;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 1.0625rem 2rem;
+    text-align: center;
+  }
+
+  &:hover,
+  &:disabled {
+    filter: brightness(90%);
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.form-error-sup {
+  color: red;
+  font-family: GothamPro-Medium;
+  font-size: .8125rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .simple-form__heading {
+    font-family: GothamPro-Bold;
+  }
+
+  .simple-button-submit {
+    &--link {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-button-submit {
+    width: 100%;
+  }
+}

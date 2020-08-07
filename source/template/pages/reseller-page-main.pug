@@ -1,0 +1,419 @@
+extends ../_template
+
+block variables
+    - var title = 'Reseller Page'
+
+block content
+    .wrapper
+        section.section.margin-bottom
+            header.header.header--vendor-page
+                    .header__first
+                        .container
+                          .header__first-all-elements
+                            .header__first-left
+                              .search-responsive-element#search-element
+                                .search-responsive-pic
+                                  svg#svgElementFocus.button-svg-search-elem-responsive
+                                    use(xlink:href='./assets/img/sprite.svg#group-35')
+                              .toggle-btn#toggle-btn
+                                span.toggle-class.toggle-class-top
+                                span.toggle-class.toggle-class-middle
+                                span.toggle-class.toggle-class-bottom
+                              .header__first-logo
+                                .header__first-url
+                                  a(href="index.html").header__first-link-logo
+                                    img(src="./assets/img/logo-png2.png" alt="ExamLabs Home Page").header__first-img
+                              .header__first-search
+                                form.header__first-form
+                                  input#inputElementFocus.header__first-input(type='search', placeholder='Search')
+                                  button#buttonElementFocus.information__button-submit-general.information__button-submit-focus(type='submit')
+                                    svg#svgElementFocus.button-svg-search-elem
+                                      use(xlink:href='./assets/img/sprite.svg#group-35')
+                            .header__first-right
+                              .header__first-works
+                                a(href="#").header__first-link.header__first-link--user How it works
+                                  .header__second-img.header__second-img--user
+                                    svg.header__first-pic-elem
+                                      use(xlink:href='./assets/img/sprite.svg#icon-question')
+                              .header__first-enter.header__first-enter--user
+                                a(href="sign-in.html").header__first-link.header__first-link--user Sign In  
+                              a(href="sign-in.html").sign-ing
+                                .header__first-enter-pic-entry
+                                  svg.header__first-enter-pic-entry-img
+                                    use(xlink:href='./assets/img/sprite.svg#if_login')
+                              .header__first-general
+                                a(href="#").header__first-link-elem
+                                  .header__first-basket
+                                    svg.header__first-pic
+                                      use(xlink:href="assets/img/sprite.svg#icon-cart")
+                                    .header__first-circle 12
+                                  .header__first-cart
+                                    .header__first-link-cart Cart (1)
+                    .container
+                        .header__second
+                            include ../common/_nav
+            .header-search-element.visually-hidden 
+                .container
+                    form.information__input
+                        input(type="search" placeholder="Search" name="search").information__input-line#informationIinputLine
+                        button(type='submit').information__button-submit.information__button-submit-focus#buttonElementFocus Search
+            .practice-row
+                .container.container--practice-line
+                    .practice__general-row
+                        .practice__title
+                            h4 practice exams:
+                        .practice__nav
+                            nav.swiper-container.s2
+                                ul.swiper-wrapper
+                                    li.practice__navigation-item.practice__navigation-item--padding.swiper-slide
+                                        a(href="#").practice__navigation-link Microsoft
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link Cisco
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link CompaTIA
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link RedHat
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link Citrix
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link HP
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link IBM
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link CheckPoint
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link CIW
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link Novell
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link WMware
+                                    li.practice__navigation-item.swiper-slide
+                                        a(href="#").practice__navigation-link Other  
+            .breadcrumbs
+                .container
+                    ul.breadcrumbs__list
+                        li.breadcrumbs__item
+                            .breadcrumbs__link
+                                a(href='index.html').breadcrumbs__url Home
+                            .breadcrumbs__text
+                                h3 Reseller
+            .reseller-page-width.files__table-general--padding-bottom
+                .container.files__table-general
+                    .files__table-left-vendor
+                        <div class="reseller-progress-title reseller-progress-title--main">
+                            <h2>Join Our Reseller Program and Start Making Money with Ease</h2>
+                        </div>
+                        <div class="text-content">
+                            <p>Do you want to know how to earn money without leaving your couch? The Exam-Labs Reseller Program is the best way to do this. Become our Reseller Partner, help your friends and other individuals prepare for their certification exams, and make money in three steps. Your income depends only on you!</p>
+                        </div>
+                        .how-it-works-block 
+                            .how-it-works-block-wrapper
+                                .how-it-works-block__title
+                                    h3 How It Works? 3 Key Steps
+                                ul.how-it-works-block__list 
+                                    li.how-it-works-block__item
+                                        .how-it-works-block__item-pic 
+                                            .how-it-works-block__item-sign 
+                                                span 1
+                                            img(src="assets/img/icon-sq-exam-new.png") 
+                                            .how-it-works-block__item-pic-absolute-elem 
+                                                img(src="assets/img/crowd-of-users-copy-2.png")
+                                        .how-it-works-block__item-subtitle 
+                                            h3 Step 1. Get Promo Code
+                                        .how-it-works-block__item-text 
+                                            p You will be provided with a unique individual promo code
+                                    li.how-it-works-block__item
+                                        .how-it-works-block__item-pic 
+                                            .how-it-works-block__item-sign 
+                                                span 2   
+                                            img(src="assets/img/icon-sq-settings.png")
+                                            .how-it-works-block__item-pic-absolute 
+                                                img(src="assets/img/shopping-bag-copy-2.png")  
+                                        .how-it-works-block__item-subtitle 
+                                            h3 Step 2. Share Your Promo Code.
+                                        .how-it-works-block__item-text 
+                                            p Send your promo code to exam candidates, friends, students
+                                    li.how-it-works-block__item
+                                        .how-it-works-block__item-pic 
+                                            .how-it-works-block__item-sign 
+                                                span 3
+                                            img(src="assets/img/icon-sq-check.png")  
+                                            .how-it-works-block__item-pic-absolute 
+                                                img(src="assets/img/group-8.png").piggy
+                                        .how-it-works-block__item-subtitle 
+                                            h3 Step 3. Earn
+                                        .how-it-works-block__item-text 
+                                            p You will receive commissions for ALL purchase done using your promo code   
+                        .reseller-progress-title 
+                            h2 Commissions Structure
+                        .reseller-progress.reseller-progress--margin-bottom
+                                        .reseller-progress__progress-wrapper
+                                            .reseller-progress__progress(style="width:57%")
+                                        .reseller-progress__progress-level.reseller-progress__progress-level--active
+                                            .progress-level__img-wrapper
+                                                img(src="assets/img/20.png")
+                                            .progress-level__description
+                                                span.progress-level__green-txt 20%
+                                            .progress-level__point
+                                            .progress-level__level-name
+                                                h3 Steel
+                                        .reseller-progress__progress-level.reseller-progress__progress-level--active
+                                            .progress-level__img-wrapper
+                                                img(src="assets/img/25.png")
+                                            .progress-level__description
+                                                span.progress-level__green-txt 25%
+                                            .progress-level__point 
+                                            .progress-level__level-name
+                                                h3 Bronze 
+                                        .reseller-progress__progress-level.reseller-progress__progress-level--current
+                                            .progress-level__img-wrapper
+                                                img(src="assets/img/30.png")
+                                            .progress-level__description
+                                                span.progress-level__green-txt 30%
+                                            .progress-level__point
+                                            .progress-level__level-name
+                                                span Silver
+                                        .reseller-progress__progress-level
+                                            .progress-level__img-wrapper 
+                                                img(src="assets/img/35.png")
+                                            .progress-level__description
+                                                span.progress-level__green-txt 35% 
+                                            .progress-level__point   
+                                            .progress-level__level-name 
+                                                h3 Gold
+                                        .reseller-progress__progress-level
+                                            .progress-level__img-wrapper 
+                                                img(src="assets/img/40.png")
+                                            .progress-level__description
+                                                span.progress-level__green-txt 40%
+                                            .progress-level__point   
+                                            .progress-level__level-name
+                                                h3 Platinum 
+                        .reseller-progress-title 
+                            h2 ExamLabs Reseller Program FAQs
+                        <ul class="general-questions__acco-list-desktop reseller" id="reseller" data-accordion-group="">
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">What products do Exam-Labs offer?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden;">
+                                    <p>Our main goal is to provide you with the high-quality study materials and the best tools for your exam preparation. We offer a wide range of study resources, such as exam questions and answers, video courses, braindumps, study guides, and exam simulator. All our preparation materials are verified by IT industry experts.</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">What will you do as a Reseller Partner?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden;">
+                                    <p>Our Reseller Program is not a full-time job, it's just a hobby that can bring you money. You can spend on reselling as much time as you want or can.</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">Is a Reseller Program free to join?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden;">
+                                    <p>Absolutely yes! No payments, no fees, no recommendations. We will pay, not you.</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">How does an Exam-Labs Reseller Program works?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden;">
+                                    <p>You should go through 2 easy steps: <br> 1. You give your individual promo code to your friends or other individuals. <br> 2. You get a commission if your promo code was used during a purchase. <br><br> Result: The more your promo code has been used, the more money you will get.</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">How much can you earn as a Reseller Partner?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden;">
+                                    <p>Your income depends on you. If you resell a lot, you earn a lot. Our top resellers earn $5,000+. Don't miss your chance to make big money!</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">What is our commissions structure?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden; transition: max-height 300ms ease 0s;">
+                                    <p>Our commissions structure has 5 levels. They are: <br> 1. Bronze – 20% commission <br> 2. Silver – 25% commission (6+ sales) <br> 3. Gold – 30% commission (16+ sales) <br> 4. Platinum – 35% commission (51+ sales) <br> 5. Diamond – 40% commission (101+ sales)</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">How will you get paid?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden; transition: max-height 300ms ease 0s;">
+                                    <p>The payment will be made either via PayPal or bank wire.</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">Is an Exam-Labs Reseller Program available in all countries?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden; transition: max-height 300ms ease 0s;">
+                                    <p>Yes, it is. Our Reseller Program is available worldwide: no boundaries and no restrictions.</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                            <li class="general-questions__responsive-content" data-accordion="">
+                                <div class="general-questions__all-responsive" data-control="">
+                                    <div class="general-questions__acco-line-element">
+                                        <strong class="general-questions__acco-trigger">How long does a Reseller Program take to get started?</strong>
+                                    </div>
+                                </div>
+                                <div class="general-questions__acco-content-responsive" data-content="" style="max-height: 0px; overflow: hidden; transition: max-height 300ms ease 0s;">
+                                    <p>You can start immediately! All you need is to sign up and you're already a Reseller Partner!</p>
+                                </div>
+                                <button class="general-questions__button" type="button" data-control=""></button>
+                            </li>
+                        </ul>
+                        ul.reseller-slider.files__title-vendor--margin-top2
+                            li.reseller-slider__item
+                                img.reseller-slider__image(src="assets/img/first-pic.png")
+                            li.reseller-slider__item
+                                img.reseller-slider__image(src="assets/img/first-pic1.png")
+                            li.reseller-slider__item
+                                img.reseller-slider__image(src="assets/img/second-pic.png")
+                            li.reseller-slider__item
+                                img.reseller-slider__image(src="assets/img/second-pic1.png")
+                            li.reseller-slider__item
+                                img.reseller-slider__image(src="assets/img/third-pic.png")
+                    .vendor__table-right.vendor__table-right--reseller
+                        <div class="registration__wrapper registration__wrapper--sidebar">
+                            a(href="#").registration__sidebar-link.link-true Click Here to see details
+                            //- <div class="registration__title registration__title--no-hide full-width">
+                            //-     <h2>Sign Up as a Reseller</h2>
+                            //- </div>
+                            //- <div class="registration__title registration__title--no-hide full-width" style="display:none;">
+                            //-     <h2>Sign In as a Reseller</h2>
+                            //- </div>
+                            //- p.registration__text-sidebar It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                            //- .sign-up-form--sidebar-wrapper
+                            //-     <form class="registration-page-mobile__form sign-up-form sign-up-form--sidebar" name="vform" action="" method="post" data-v="{&quot;required&quot;:[{&quot; field&quot;:&quot;email&quot;,&        quot;message&quot;:&quot;Please fill in `{field}` field.&quot;},{&quot;field&quot;:&quot;password&quot;,&quot;message&    quot;:&quot;Please fill in `{field}` field.&      quot;},{&quot;field&quot;:&quot;confirm&quot;,&quot;message&quot;:&quot;Please fill in `{field}` field.&  quot;}],&quot;regex&quot;:[{&quot;field&quot;:&quot;email&      quot;,&quot;message&quot;:&quot;Your e-mail address does not conform to a proper e-mail   address syntax, please check your typing and try again&quot;,&quot;pattern&   quot;:&quot;^[A-Za-z_0-9\\.\\-]+@[A-Za-z0-9\\.\\-]+\\.[A-Za-z]{2,}$&quot;},{&   quot;field&quot;:&quot;password&quot;,&quot;message&quot;:&quot;Your password must be at     least 6 characters and comprised of numbers and letters ONLY.&    quot;,&quot;pattern&quot;:&quot;^[a-zA-Z0-9]{6,18}$&quot;}],&quot;equals&quot;:[{&quot;field&quot;:&   quot;password&quot;,&quot;message&quot;:&quot;Your   password confirmation did not match the original, please try again.&quot;,&quot;related&quot;:&quot;confirm&quot;}]    }">
+                            //-         <div class="registration-page-mobile__form-input">
+                            //-             <label class="registration-page-mobile__label form-element">
+                            //-                 <div class="registration-page-mobile__heading">
+                            //-                     <h3>Email <span>*</span></h3>
+                            //-                 </div>
+                            //-                 <input class="registration-page-mobile__input form-field " type="email" name="sign-up[email]" data-field="email" value="">
+                            //-                 <div class="val_error "></div>
+                            //-             </label>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__form-input">
+                            //-             <label class="registration-page-mobile__label form-element">
+                            //-                 <div class="registration-page-mobile__heading">
+                            //-                     <h3>Password <span>*</span></h3>
+                            //-                 </div>
+                            //-                 <input class="registration-page-mobile__input form-field " type="password" name="sign-up[password]" data-field="password">
+                            //-                 <div class="val_error "></div>
+                            //-             </label>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__form-input registration-page-mobile__form-input--margin">
+                            //-             <label class="registration-page-mobile__label form-element">
+                            //-                 <div class="registration-page-mobile__heading">
+                            //-                     <h3>Repeat Password <span>*</span></h3>
+                            //-                 </div>
+                            //-                 <input class="registration-page-mobile__input form-field " type="password" name="sign-up[confirm]" data-field="confirm">
+                            //-                 <div class="val_error "></div>
+                            //-             </label>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__wrapper-elem">
+                            //-             <div class="registration-page-mobile__submit registration-page-mobile__submit--width">
+                            //-                 <button class="registration-page-mobile__button" type="submit" name="register">Sign Up</button>
+                            //-             </div>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__border-top">
+                            //-             <div class="registration-page-mobile__wrapper-elem">
+                            //-                 <div class="registration-page-mobile__account">
+                            //-                     <a class="registration-page-mobile__account-button" href="https://www.exam-labs.com/accounts/login">I already have Exam-Labs account</a>
+                            //-                 </div>
+                            //-             </div>
+                            //-         </div>
+                            //-     </form>
+                            //-     <form class="registration-page-mobile__form sign-up-form sign-up-form--sidebar" style="display:none;" name="vform" action="" method="post" data-v="{&quot;required&quot;:[{&quot;field&quot;:&quot;email&quot;,&quot;message&quot;:&quot;Please fill in `{field}` field.&quot;},{&quot;field&quot;:&quot;password&quot;,&quot;message&quot;:&quot;Please fill in `{field}` field.&quot;}],&quot;regex&quot;:[{&quot;field&quot;:&quot;email&quot;,&quot;message&quot;:&quot;Your email address does not conform to a proper email address syntax, please check your typing and try again.&quot;,&quot;pattern&quot;:&quot;^[A-Za-z_0-9\\.\\-]+@[A-Za-z0-9\\.\\-]+\\.[A-Za-z]{2,}$&quot;},{&quot;field&quot;:&quot;password&quot;,&quot;message&quot;:&quot;Your password must be at least 6 characters and comprised of numbers and letters ONLY.&quot;,&quot;pattern&quot;:&quot;^[a-zA-Z0-9]{6,18}$&quot;}]}">
+                            //-         <div class="registration-page-mobile__form-input">
+                            //-             <label class="registration-page-mobile__label form-element">
+                            //-                 <div class="registration-page-mobile__heading">
+                            //-                     <h3>Email <span>*</span></h3>
+                            //-                 </div>
+                            //-                 <input class="registration-page-mobile__input form-field " type="email" name="sign-in[email]" data-field="email" value="">
+                            //-                 <div class="val_error "></div>
+                            //-             </label>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__form-input registration-page-mobile__form-input--margin">
+                            //-             <label class="registration-page-mobile__label form-element">
+                            //-                 <div class="registration-page-mobile__heading">
+                            //-                     <h3>Password <span>*</span></h3>
+                            //-                 </div>
+                            //-                 <input class="registration-page-mobile__input form-field " type="password" name="sign-in[password]" data-field="password">
+                            //-                 <div class="val_error "></div>
+                            //-             </label>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__forgot">
+                            //-             <a class="registration-page-mobile__forgot-password" href="http://examlabs.tk/forgot">Forgot Password?</a>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__wrapper-elem">
+                            //-             <div class="registration-page-mobile__submit registration-page-mobile__submit--width">
+                            //-                 <button class="registration-page-mobile__button" type="submit" name="register">Sign In</button>
+                            //-             </div>
+                            //-         </div>
+                            //-         <div class="registration-page-mobile__border-top">
+                            //-             <div class="registration-page-mobile__wrapper-elem">
+                            //-                 <div class="registration-page-mobile__account registration-page-mobile__submit--width">
+                            //-                     <a class="registration-page-mobile__account-button" href="http://examlabs.tk/register">I don't have an account</a>
+                            //-                 </div>
+                            //-             </div>
+                            //-         </div>
+                            //-     </form>
+                            .sidebar-help.block-border
+                                p.text-grey.text-center If any questions left, please contact us at
+                                a(href="#").text-center.link-true reseller@exam-labs.com
+                                p.text-grey.text-center Our support team is always happy to help you
+
+                            .reviews.block-border
+                                ul.reviews__list
+                                    li.reviews__item
+                                        p.reviews__text "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
+                                        b.reviews__author - Jasses Cameron (MSCE, MCDBA)
+                                    li.reviews__item
+                                        p.reviews__text "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
+                                        b.reviews__author - Jasses Cameron (MSCE, MCDBA)
+                                    li.reviews__item
+                                        p.reviews__text "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
+                                        b.reviews__author - Jasses Cameron (MSCE, MCDBA)
+                        </div>
+            include ../common/adv                           
+            include ../common/_footer
+            include ../common/_sidebar
+            include ../common/_modal-download
+            include ../common/_modal-vip-subs
+            include ../common/_modal-popup-download
+            include ../common/_modal-contact-form
+            include ../common/_modal-how-it-works
+            include ../common/_modal-download-two
+            include ../common/_modal-add-to-cart

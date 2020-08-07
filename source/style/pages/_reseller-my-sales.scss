@@ -1,0 +1,85 @@
+@media (max-width: 768px) {
+  .my-sales-table {
+    border-radius: 0;
+    border: none;
+    overflow: visible;
+  }
+
+  .my-sales-table__header {
+    display: none;
+  }
+
+  .my-sales-table__body-block {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: none;
+
+    &:not(:last-child) {
+      padding-bottom: 1.875rem;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    & > * {
+      width: 100%;
+    }
+
+    .my-sales-table__body-title {
+      width: calc(100% + 5.2%);
+      margin: 0 -2.6% 1.875rem;
+      padding: 1.25rem 2.6%;
+      background: #f7f7f9;
+      border-right: none;
+    }
+
+    .my-sales-table__body-id,
+    .my-sales-table__body-amount,
+    .my-sales-table__body-status {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0;
+      border-right: none;
+
+      span {
+        font-size: 0.9375rem;
+        line-height: 1.4;
+        color: #7a8ea5;
+      }
+
+      h3 {
+
+      }
+    }
+
+    .my-sales-table__body-amount,
+    .my-sales-table__body-status {
+      padding-top: 1.25rem;
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .my-sales-table__body-block {
+    .my-sales-table__body-title {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .my-sales-table__body-block {
+    .my-sales-table__body-title {
+      width: calc(100% + 10%);
+      margin: 0 -5% 1.875rem;
+      padding: 1.25rem 5%;
+    }
+  }
+}

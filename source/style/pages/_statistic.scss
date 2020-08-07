@@ -1,0 +1,106 @@
+#statistic {
+  margin-bottom: 3.125rem;
+
+  text {
+    fill: #7a8ea5 !important;
+    font-size: 1rem !important;
+  }
+
+  path {
+    stroke: #d9e0ec;
+    stroke-width: 1;
+
+    &[stroke="#0b62a4"] {
+      stroke: #f88c3d;
+      stroke-width: 3 !important;
+    }
+  }
+
+  circle {
+    fill: #f88c3d;
+    stroke-width: 0;
+    stroke: none;
+  }
+
+  .morris-default-style {
+    border: none;
+    min-width: 6rem;
+    height: 3.8125rem;
+    border-radius: 10px;
+    padding: 0.625rem 0.9375rem;
+    background: linear-gradient(134deg, #f2f4f7 22%, #dce2e9 100%);
+    z-index: 2;
+  }
+
+  .morris-hover-row-label {
+    font-size: 0.875rem;
+    font-family: GothamPro-Medium;
+    font-weight: 500;
+    color: #7a8ea5;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .morris-hover-point {
+    color: #2b8aeb !important;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+}
+
+.statistic__filter-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  .statistic__filter {
+    .select2-selection {
+      height: auto !important;
+    }
+  
+    .categories__border-card {
+      &::after {
+        display: none;
+      }
+    }
+  
+    .categories__triangle {
+      display: none;
+    }
+  
+    .select2-selection__rendered {
+      border-radius: 0;
+      border: none !important;
+      background: transparent;
+      padding: 0 2rem 0 1.25rem;
+      color: #7a8ea5 !important;
+      font-size: 1rem;
+      line-height: 2rem !important;
+    }
+  
+    .select2-selection__arrow {
+      b {
+        left: auto;
+        right: 0;
+        border: none;
+        width: 1rem;
+        height: 0.625rem;
+        background: url("../img/drop-down.png") no-repeat center;
+        transform: translateY(-50%);
+        transition: transform 0.1s ease-in-out;
+      }
+    }
+
+    .select2-container--open {
+      .selection .select2-selection .select2-selection__rendered {
+        border: none !important;
+      }
+
+      .select2-selection__arrow {
+        b {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+  }  
+}

@@ -1,0 +1,291 @@
+.profit__body-title .show-between-0-480,
+.show-between-0-480 {
+  display: none;
+}
+
+.profit__body-block {
+  &:hover {
+    background-color: #f7f7f9;
+  }
+}
+
+.profit__body-first,
+.profit__header-first,
+.profit__footer-first {
+  width: 25%;
+}
+
+.profit__body-second,
+.profit__header-second,
+.profit__footer-second {
+  width: 19%;
+}
+
+.profit__body-third,
+.profit__header-third,
+.profit__footer-third {
+  width: 31%;
+}
+
+.profit__body-fourth,
+.profit__header-fourth,
+.profit__footer-fourth {
+  width: 25%;
+}
+
+.profit__footer-block-paid-first {
+  width: 44%;
+}
+
+.profit__footer-block-paid-second {
+  width: 31%;
+}
+
+.profit__footer-block-paid-third {
+  width: 25%;
+}
+
+.promo-code-block__input {
+  input {
+    font-weight: 700;
+  }
+}
+
+.profit__header-title {
+  padding: 1.25rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .profit__body-first,
+  .profit__header-first,
+  .profit__footer-first {
+    width: 35%;
+  }
+
+  .profit__body-third,
+  .profit__header-third,
+  .profit__footer-third {
+    width: 25%;
+  }
+
+  .profit__footer-block-paid-first {
+    width: 54%;
+  }
+  
+  .profit__footer-block-paid-second {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profit {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .product--reseller {
+    padding-top: 1.5rem;
+  }
+
+  .profit__body-title .show-between-0-480,
+  .show-between-0-480 {
+    display: block;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .profit__body-title {
+    text-align: left;
+    padding: 0;
+
+    .profit__mobile-title {
+      display: block;
+      color: #7a8ea5;
+      margin-bottom: 0.625rem;
+      text-align: left;
+    }
+
+    h3, h4, h5, span {
+      text-align: left;
+      color: #2b2c30;
+      justify-content: flex-start;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    &--frozen h5 {
+      color: rgba(43, 44, 48, 0.5);
+    }
+  }
+
+  .profit__body-block {
+    border-bottom: 0.0625rem solid #d9e0ec;
+  }
+
+  .profit__header {
+    display: none;
+  }
+
+  .profit__body-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5%;
+    padding: 0 5% 1rem;
+
+    & > * {
+      width: 50%;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &:first-child {
+      border-top: 0.0625rem solid #d9e0ec;
+      padding-top: 1rem;
+    }
+  }
+
+  .profit__body-first,
+  .profit__body-second,
+  .profit__body-third,
+  .profit__body-fourth {
+    border-right: none;
+  }
+
+  .profit__body-first,
+  .profit__body-second {
+    padding-bottom: 1rem;
+  }
+
+  .profit__footer-title-postfix {
+    display: inline;
+  }
+
+  .profit__footer {
+    margin: 0 -5%;
+
+    .profit__footer-block {
+      & > * {
+        width: 50%;
+      }
+
+      .profit__footer-third,
+      .profit__footer-fourth {
+        border-right: none;
+      }
+
+      &:first-child {
+        flex-wrap: wrap;
+
+        .profit__footer-first,
+        .profit__footer-second {
+          width: 50%;
+          border-bottom: 0.0625rem solid #d9e0ec;
+        }
+
+        .profit__footer-second {
+          border-right: none;
+        }
+
+        .profit__footer-third {
+          order: 1;
+          display: flex;
+          align-items: center;
+
+          .profit__footer-title {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .profit__footer-title {
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    h3, h4 {
+      font-family: GothamPro;
+      font-size: .9375rem;
+      line-height: normal;
+    }
+  }
+
+  .profit__footer-first,
+  .profit__footer-block-paid-first {
+    border-right: none;
+  }
+
+  .profit__footer-second,
+  .profit__footer-third,
+  .profit__footer-block-paid-second {
+    .profit__footer-title {
+      justify-content: flex-end;
+
+      h3 {
+        font-family: GothamPro-Medium;
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  .profit__footer-first .profit__footer-title,
+  .profit__footer-fourth .profit__footer-title,
+  .profit__footer-block-paid-first .profit__footer-title {
+    padding-left: 9.1%;
+  }
+
+  .profit__footer-second .profit__footer-title,
+  .profit__footer-third .profit__footer-title,
+  .profit__footer-block-paid-second .profit__footer-title {
+    padding-right: 9.1%;
+  }
+
+  .profit__footer-block-paid-first,
+  .profit__footer-block-paid-second {
+    width: 50%;
+  }
+
+  .profit__footer-block-paid-second {
+    border-right: none;
+  }
+
+  .profit__footer-block-paid-third {
+    display: none;
+  }
+
+  .profit__footer-block-paid {
+    &:last-child {
+      border-bottom: 1px solid #d9e0ec;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-code-block__button {
+    width: 100%;
+    margin-top: 1.875rem;
+
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .socials__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

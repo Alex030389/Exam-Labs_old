@@ -1,0 +1,104 @@
+extends ../_template
+
+block variables
+    - var title = 'Unlimited Subscription 3'
+
+block content
+    .wrapper
+        section.section.margin-bottom.margin-bottom--no-footer
+            header.header
+                include ../common/_header-empty          
+            .content-tutorial-details.content-tutorial-details--padding-top
+                .cart__content.cart__content-next
+                    .cart__general
+                        .container.container--flex-second
+                            .cart__left.cart__left--padding
+                                p.simple-form__amount
+                                    strong Amount: 
+                                    span $128.31
+                                h2.simple-form__heading Account Details
+                                p.form-error-sup Form Error Text
+                                <form class="simple-form" name="vform" action="" method="post" data-v="{&quot;required&quot;:[{&quot;field&quot;:&quot;paypal&quot;,&quot;message&quot;:&quot;Please fill in `Paypal` field.&quot;},{&quot;field&quot;:&quot;acc_number&quot;,&quot;message&quot;:&quot;Please fill in `Account Number` field.&quot;},{&quot;field&quot;:&quot;comment&quot;,&quot;message&quot;:&quot;Please fill in `Comment` field.&quot;}]}">
+                                    <div class="registration-page-mobile__form-input">
+                                        <label class="registration-page-mobile__label form-element">
+                                            <div class="registration-page-mobile__heading">
+                                                <h3>Paypal <span>*</span></h3>
+                                            </div>
+                                            <input class="registration-page-mobile__input form-field" type="text" name="payout[paypal]" data-field="paypal" value="">
+                                            <div class="val_error "></div>
+                                        </label>
+                                    </div>
+                                    <div class="registration-page-mobile__form-input">
+                                        <label class="registration-page-mobile__label form-element">
+                                            <div class="registration-page-mobile__heading">
+                                                <h3>Account Number <span>*</span></h3>
+                                            </div>
+                                            <input class="registration-page-mobile__input form-field " type="text" name="payout[acc_number]" data-field="acc_number" value="">
+                                            <div class="val_error "></div>
+                                        </label>
+                                    </div>
+                                    <div class="registration-page-mobile__form-input">
+                                        <label class="registration-page-mobile__label form-element">
+                                            <div class="registration-page-mobile__heading">
+                                                <h3>Account Name</h3>
+                                            </div>
+                                            <input class="registration-page-mobile__input form-field" type="text" name="payout[acc_name]" data-field="acc_name" value="">
+                                        </label>
+                                    </div>
+                                    <div class="registration-page-mobile__form-input">
+                                        <label class="registration-page-mobile__label form-element">
+                                            <div class="registration-page-mobile__heading">
+                                                <h3>Account Address</h3>
+                                            </div>
+                                            <input class="registration-page-mobile__input form-field" type="text" name="payout[acc_address]" data-field="acc_address" value="">
+                                        </label>
+                                    </div>
+                                    <div class="registration-page-mobile__form-input">
+                                        <label class="registration-page-mobile__label form-element">
+                                            <div class="registration-page-mobile__heading">
+                                                <h3>Bank Name</h3>
+                                            </div>
+                                            <input class="registration-page-mobile__input form-field" type="text" name="payout[bank]" data-field="bank" value="">
+                                        </label>
+                                    </div>
+                                    <div class="registration-page-mobile__form-input">
+                                        <label class="registration-page-mobile__label form-element">
+                                            <div class="registration-page-mobile__heading">
+                                                <h3>Swift Code</h3>
+                                            </div>
+                                            <input class="registration-page-mobile__input form-field" type="text" name="payout[swift_code]" data-field="swift_code" value="">
+                                        </label>
+                                    </div>
+                                    <div class="registration-page-mobile__form-input">
+                                        <label class="registration-page-mobile__label form-element">
+                                            <div class="registration-page-mobile__heading">
+                                                <h3>Comment <span>*</span></h3>
+                                            </div>
+                                            <textarea data-field="comment" name="payout[comment]" class="comments__textarea-field form-field "></textarea>
+                                            <div class="val_error "></div>
+                                        </label>
+                                    </div>
+                                    <button class="simple-button-submit" type="submit">WITHDRAW</button>
+                                </form>
+                            .card__right.card__right-next.cart__right--padding
+                                <div class="card__pay-methods-right-elem">
+                                    <div class="card__pay-logos-elems">
+                                        <div class="card__pay-pic-elem"><img class="card__pay-img" src="assets/img/visa-logo.png"></div>
+                                        <div class="card__pay-pic-elem"><img class="card__pay-img" src="assets/img/mastercard-logo.png"></div>
+                                        <div class="card__pay-pic-elem"><img class="card__pay-img" src="assets/img/maestrocard-logo.png"></div>
+                                        <div class="card__pay-pic-elem"><img class="card__pay-img" src="assets/img/american-express-card-logo.png"></div>
+                                        <div class="card__pay-pic-solo-elem"><img class="card__pay-img" src="assets/img/solo-logo.png"></div>
+                                        <div class="card__pay-pic-elem-jcb"><img class="card__pay-img" src="assets/img/jcb-logo.png"></div>
+                                    </div>
+                                    <div class="card__pay-text">
+                                        <p>Your purchase with Exam-Labs is safe and fast. Your products will be available for immediate download after your payment has been received.</p>
+                                    </div>
+                                </div>
+                                section.help
+                                    h3.help__heading Need Help? Contact Us
+                                    a.help__link(href="#") Customer Support
+            include ../common/_sidebar                                                                 
+
+
+                                    
+                                

@@ -1,0 +1,384 @@
+extends ../_template
+
+block variables
+    - var title = 'Solutions'
+
+block content
+    .wrapper
+        section.section.margin-bottom
+            header.header
+                include ../common/_header
+                .container
+                    .header__second
+                        include ../common/_nav
+            .header-search-element.visually-hidden 
+                .container
+                    form.information__input
+                        input(type="search" placeholder="Search" name="search").information__input-line#informationIinputLine
+                        button(type='submit').information__button-submit.information__button-submit-focus#buttonElementFocus Search            
+            .content
+                include ../common/_practice-line
+            .problems
+                .breadcrumbs
+                    .container
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                .breadcrumbs__link
+                                    a(href='index.html').breadcrumbs__url Home
+                                .breadcrumbs__text
+                                    h3 Solution
+                <div class="cart__content">
+                    <div class="cart__general">
+                        <div class="container container--flex-second container--padding-top">
+                            <div class="cart__left cart__left--padding">
+                                <div class="problems__title"><h2>There was a problem accepting <br> your payment :(</h2></div>
+                                <div class="problems__desc">
+                                    <p>The credit card processor declined your payment.</p>
+                                </div>
+                                <div class="problems__important">
+                                    <p><span>IMPORTANT.</span> It's important that you contact your bank to inform them that you are planning to make an online purchase from <span>“EXAMLABS.COM”</span> for <span>$55.99</span>, before   trying any of             the following options. Asking your bank to authorize your next transaction, with a simple phone call, typically resolves any online purchase problems. Please also ensure you   are entering all of your details in           correctly, before submitting.</p>
+                                </div>
+                                <div class="problems__heading">
+                                    <h2>Option 1: Alternative Payment Processor</h2>
+                                </div>
+                                <div class="problems__option">
+                                    <div class="problems__option-left">
+                                        <div class="problems__option-left-desc">
+                                            <p>Please try our alternative payment processor here. We accept: MasterCard and American Express cards.</p>
+                                        </div>
+                                    </div>
+                                    <div class="problems__option-right">
+                                        <div class="problems__option-left-pay-methods-responsive">
+                                            <div class="card__pay-pic-visa-size">
+                                                <img class="card__pay-img" src="./assets/img/visa-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-master-card-size">
+                                                <img class="card__pay-img" src="./assets/img/mastercard-logo.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="problems__option-left-pay-methods">
+                                    <div class="card__pay-pic-visa-size">
+                                        <img class="card__pay-img" src="./assets/img/visa-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-master-card-size">
+                                        <img class="card__pay-img" src="./assets/img/mastercard-logo.png">
+                                    </div>
+                                </div>
+                                .paynow__form
+                                    form(id="pay-form" action="#" method="post")
+                                        .card__wrapper
+                                            .card__title
+                                                h2 Secure Billing Information
+                                            .cart__form
+                                                .cart__form-general
+                                                    .cart__form-left
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 Full name 
+                                                                    span *
+                                                            .cart__form-input-line
+                                                                input.cart__form-input.form-field(name="pay[full_name]" data-field="full_name" id="stripe_name" type="text")
+                                                            .val_error
+                                                    .cart__form-right
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 Email 
+                                                                    span *
+                                                            .cart__form-input-line
+                                                                input.cart__form-input.form-field(value="sam@testking.com" disabled="disabled" name="pay[email]" data-field="email" type="email")
+                                                            .val_error
+                                                .cart__form-general
+                                                    .cart__user-country-new
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 Country 
+                                                                    span *
+                                                            .cart__form-input-line-new
+                                                                .categories__select
+                                                                    .categories__select-wrapper-card
+                                                                        .categories__border-card
+                                                                        .categories__triangle
+                                                                        select.selectize.form-field(name="pay[country_id]" data-field="country_id" id="stripe_country")
+                                                                            option(value) Select
+                                                                            option(value="1") Afghanistan
+                                                                            option(value="2") Albania
+                                                                            option(value="3") Algeria
+                                                                            option(value="4") American Samoa
+                                                                            option(value="5") Andorra
+                                                                            option(value="6") Angola
+                                                                            option(value="7") Afghanistan
+                                                                            option(value="8") Albania
+                                                                            option(value="9") Algeria
+                                                                            option(value="10") American Samoa
+                                                                            option(value="11") Andorra
+                                                                            option(value="12") Angola
+                                                                .val_error
+                                                    .cart__user-state
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 State/Province  
+                                                                    span *
+                                                            .cart__form-input-line
+                                                                input.cart__form-input.form-field(name="pay[state]" data-field="state" id="stripe_state" type="text")
+                                                            .val_error
+                                                    .cart__user-city
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 City 
+                                                                    span *
+                                                            .cart__form-input-line
+                                                                input.cart__form-input.form-field(name="pay[city]" data-field="city" id="stripe_city" type="text")
+                                                            .val_error
+                                                .cart__user-place
+                                                    .cart__user-state
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 Address 
+                                                                    span *
+                                                            .cart__form-input-line
+                                                                input.cart__form-input.form-field(name="pay[address]" data-field="address" id="stripe_address" type="text")
+                                                            .val_error
+                                                    .cart__user-state
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 Zip/Postal 
+                                                                    span *
+                                                            .cart__form-input-line
+                                                                input.cart__form-input.form-field.address_zip(name="pay[zip]" data-field="zip" id="stripe_zip" type="text")
+                                                            .val_error
+                                                    .cart__user-city
+                                                        label.cart__form-label.form-element
+                                                            .cart__form-title
+                                                                h4 Phone
+                                                                    span *
+                                                            .cart__form-input-line
+                                                                input.cart__form-input.form-field.address_zip(name="pay[zip]" data-field="zip" id="stripe_zip" type="text")
+                                                            .val_error
+                                        .card__information
+                                            .card__title
+                                                h2 Credit Card Information
+                                            .card__form
+                                                .card__form-number
+                                                    .card__form-general
+                                                        .card__form-card-number
+                                                            label.card__form-label-card
+                                                                .card__form-title.form-element
+                                                                    h4 Card Number 
+                                                                        span *
+                                                                    .card__form-input-line
+                                                                        input.card__form-input.form-field.card-number(name="pay[card_number]" data-field="card_number" type="text" placeholder="0000 0000 0000 0000" maxlength="19")
+                                                                        .card__input-pic
+                                                                            i.general-sprite.general-sprite-icon-lock-grey
+                                                                    .val_error
+                                                        .cart__user-place-general-block
+                                                            .cart__user-place.cart__user-place--width
+                                                                .cart__user-country
+                                                                    label.cart__form-label-date.form-element
+                                                                        .cart__form-title
+                                                                            h4 Expiration date 
+                                                                                span *
+                                                                        .cart__form-input-line.cart__form-input-line--width
+                                                                            .categories__select
+                                                                                .categories__select-wrapper-card
+                                                                                    .categories__border-card.categories__border-card--position
+                                                                                    .categories__triangle
+                                                                                    select.selectize.form-field(data-field="card_expired_month" id="card-expiry-month" name="pay[card_expired_month]")
+                                                                                        option 1
+                                                                                        option 2
+                                                                                        option 3
+                                                                                        option 4
+                                                                                        option 5
+                                                                                        option 6
+                                                                                        option 7
+                                                                                        option 8
+                                                                                        option 9
+                                                                                        option 10
+                                                                                        option 11
+                                                                                        option 12
+                                                        .cart__user-place-general-block
+                                                            .cart__user-place
+                                                                .cart__user-country.form-element
+                                                                    label.cart__form-label-year
+                                                                        .cart__form-title-hidden
+                                                                            br
+                                                                        .cart__form-input-line.cart__form-input-line--width
+                                                                            .categories__select
+                                                                                .categories__select-wrapper-card
+                                                                                    .categories__border-card.categories__border-card--position
+                                                                                    .categories__triangle
+                                                                                    select.selectize.form-field(name="pay[card_expired_year]" data-field="card_expired_year" id="card-expiry-year")
+                                                                                        option 19
+                                                                                        option 20
+                                                                                        option 21
+                                                                                        option 22
+                                                                                        option 23
+                                                                                        option 24
+                                                                                        option 25
+                                                                                        option 26
+                                                                                        option 27
+                                                                                        option 28
+                                                                    .val_error
+                                                        .card__form-title.form-element.card__form-title--width
+                                                            label.cart__form-label-security
+                                                                h4 Security Code (CVV)
+                                                                    span *
+                                                                .card__form-input-line.card__form-input-line--width-50
+                                                                    input.cart__form-input.form-field(name="pay[card_cvv]" data-field="card_cvv" id="card-cvv" type="text" maxlength="4")
+                                                                    .card__form-security-pic
+                                                                        i.general-sprite.general-sprite-icon-card
+                                                                .val_error--general-wrapper
+                                                                    .val_error
+                                                .card__form-security
+                                                    label.card__form-label-second.form-element
+                                                        .val_error
+                                                        .checkbox.form-element
+                                                            .checkbox-line
+                                                                label.checkbox-label
+                                                                    input.checkbox-input.form-field.accept-billing-policy(data-domain="Devlabs.tk" data-field="accept_billing_policy" type="checkbox" name="checkbox-test")
+                                                                    span.checkbox-img
+                                                                    .checkbox-desc
+                                                                        p I have read and agree to Devlabs.tk 
+                                                                            a(href="#" id="billing-policy-modal") Billing Policy
+                                                    .button-card
+                                                        button.button-submit.button-submit--card(type="submit") Pay
+                                                        p.payment-error
+                                <div class="problems__heading">
+                                    <h2>Option 2: Credit Card payment through a Secondary Bank</h2>
+                                </div>
+                                <div class="problems__option problems__option--unregistered">
+                                    <div class="problems__option-left">
+                                        <div class="problems__option-left-desc">
+                                            <p>Try your Card through a Secondary Bank.  This option is only valid for Visa, Mastercard and American Express cards. <b>Your problem may be caused by incorrect credit card information. Please check your typing. If your payment fails again - please try Other payment methods.</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="problems__option-right">
+                                        <div class="problems__option-left-pay-methods-responsive">
+                                            <div class="card__pay-pic-visa-size">
+                                                <img class="card__pay-img" src="./assets/img/visa-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-master-card-size">
+                                                <img class="card__pay-img" src="./assets/img/mastercard-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-american-express-size">
+                                                <img class="card__pay-img" src="./assets/img/american-express-card-logo.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form>
+                                        <label class="cart__form-label form-element">
+                                            <div class="cart__form-title">
+                                                <h4>Email <span>*</span></h4>
+                                            </div>
+                                            <div class="cart__form-input-line">
+                                                <input class="cart__form-input form-field form-validation-error" name="email" type="email">
+                                                <div class="val_error val_error--active">Please fill in `Email` field.</div>
+                                            </div>
+                                        </label>
+                                        <button class="problems__option-button" type="button">Pay Now</button>
+                                    </form>
+                                </div>
+                                <div class="problems__option-left-pay-methods">
+                                    <div class="card__pay-pic-visa-size">
+                                        <img class="card__pay-img" src="./assets/img/visa-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-master-card-size">
+                                        <img class="card__pay-img" src="./assets/img/mastercard-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-american-express-size">
+                                        <img class="card__pay-img" src="./assets/img/american-express-card-logo.png">
+                                    </div>
+                                </div>
+                                <div class="problems__heading">
+                                    <h2>Option 3: Re-try Previous Payment Processor</h2>
+                                </div>
+                                <div class="problems__option">
+                                    <div class="problems__option-left">
+                                        <div class="problems__option-left-desc">
+                                            <p>Before trying your card again for payment it is highly recommended that you inform your bank that you are going to make an online purchase from ExamLabs.com for $69.99. Ask the bank to authorize the transaction as you are trying to make a purchase again. Make sure that you are filling all the information correctly.</p>
+                                        </div>
+                                    </div>
+                                    <div class="problems__option-right">
+                                        <div class="problems__option-left-pay-methods-responsive">
+                                            <div class="card__pay-pic-visa-size">
+                                                <img class="card__pay-img" src="./assets/img/visa-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-master-card-size">
+                                                <img class="card__pay-img" src="./assets/img/mastercard-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-maestro-card-size">
+                                                <img class="card__pay-img" src="./assets/img/maestrocard-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-american-express-size">
+                                                <img class="card__pay-img" src="./assets/img/american-express-card-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-solo-size">
+                                                <img class="card__pay-img" src="./assets/img/solo-logo.png">
+                                            </div>
+                                            <div class="card__pay-pic-jcb-size">
+                                                <img class="card__pay-img" src="./assets/img/jcb-logo.png">
+                                            </div>
+                                        </div>
+                                        <div class="problems__option-button problems__option-button--color">
+                                            <a class="problems__option-link" href="https://www.examlabs.com/checkout">Proceed</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="problems__option-left-pay-methods">
+                                    <div class="card__pay-pic-visa-size">
+                                        <img class="card__pay-img" src="./assets/img/visa-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-master-card-size">
+                                        <img class="card__pay-img" src="./assets/img/mastercard-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-maestro-card-size">
+                                        <img class="card__pay-img" src="./assets/img/maestrocard-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-american-express-size">
+                                        <img class="card__pay-img" src="./assets/img/american-express-card-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-solo-size">
+                                        <img class="card__pay-img" src="./assets/img/solo-logo.png">
+                                    </div>
+                                    <div class="card__pay-pic-jcb-size">
+                                        <img class="card__pay-img" src="./assets/img/jcb-logo.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card__right card__right--padding ">
+                                <div class="card__right-wrapper card__right-wrapper--no-margin">
+                                    <div class="card__right-title card__right-title--border-visibility">
+                                        <h2>Your cart (1)</h2>
+                                    </div>
+                                    <ul class="cart__product-list">
+                                        <li class="cart__product-item">
+                                            <div class="cart__product-all-info-wrpper cart__product-all-info-wrpper--single">
+                                                <div class="cart__product-description-wrapper">
+                                                    <div class="cart__product-complectation">
+                                                        <a class="cart__product-link" href="https://www.examlabs.com/premium-subscription">Unlimited Access to Premium Files: Monthly Subscription</a>
+                                                    </div>
+                                                </div>
+                                                <p class="cart__product-price cart__product-price--no-order">
+                                                    <span class="cart__product-old-price">$79.99</span>
+                                                    <span class="cart__product-new-price">$55.99</span>
+                                                    <br class="cart__product-price-break">
+                                                    <span class="cart__product-save-sum">Saved&nbsp;30%&nbsp;Off</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="cart__total-wrapper" id="promo-wrap">
+                                        <span class="cart__subtotal-text">Subtotal</span><span class="cart__subtotal-sum">$79.99</span>
+                                        <span class="cart__subtotal-text">Discount</span><span class="cart__subtotal-sum">$24.00</span>
+                                        <span class="cart__total-text">Total price</span><span class="cart__total-sum">$55.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        include ../common/_footer
+    include ../common/_sidebar
+    include ../common/_modal-how-it-works

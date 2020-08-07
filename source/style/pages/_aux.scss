@@ -1,0 +1,21 @@
+.profit__body-title .show-between-0-480,
+.show-between-0-480,
+.show-between-0-768 {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .show-between-0-768 {
+    display: block;
+  }
+
+  .profit__body-title .show-between-0-480,
+  .show-between-0-480 {
+    display: block;
+
+    &::after {
+      display: none;
+    }
+  }
+}
