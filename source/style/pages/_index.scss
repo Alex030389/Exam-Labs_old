@@ -18719,6 +18719,19 @@ th {
   }
 }
 
+
+
+.slider3 {
+
+  &--pt--lg {
+    padding-top: 2.5rem !important;
+
+    .vendor__table-right-list-element-responsive {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .swiper-container {
   z-index: 0;
   padding-left: 0!important;
