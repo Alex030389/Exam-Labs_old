@@ -316,26 +316,26 @@ var swiper = new Swiper('.s7', {
 //     placeholder: 'Select an option'
 //   });
 
-new Morris.Line({
-  element: 'statistic',
-  data: [
-    { year: 'Mar 10 2020', value: 15 },
-    { year: 'Mar 15 2020', value: 13 },
-    { year: 'Mar 16 2020', value: 7 },
-    { year: 'Mar 19 2020', value: 25 },
-    { year: 'Mar 25 2020', value: 10 },
-    { year: 'Mar 26 2020', value: 7 },
-    { year: 'Mar 27 2020', value: 25 },
-    { year: 'Mar 28 2020', value: 10 },
-  ],
-  xkey: 'year',
-  ykeys: ['value'],
-  labels: ['Sales'],
-  smooth: false,
-  parseTime: false,
-  resize: true,
-  yLabelFormat: function (y) { return Math.floor(y); },
-});
+// new Morris.Line({
+//   element: 'statistic',
+//   data: [
+//     { year: 'Mar 10 2020', value: 15 },
+//     { year: 'Mar 15 2020', value: 13 },
+//     { year: 'Mar 16 2020', value: 7 },
+//     { year: 'Mar 19 2020', value: 25 },
+//     { year: 'Mar 25 2020', value: 10 },
+//     { year: 'Mar 26 2020', value: 7 },
+//     { year: 'Mar 27 2020', value: 25 },
+//     { year: 'Mar 28 2020', value: 10 },
+//   ],
+//   xkey: 'year',
+//   ykeys: ['value'],
+//   labels: ['Sales'],
+//   smooth: false,
+//   parseTime: false,
+//   resize: true,
+//   yLabelFormat: function (y) { return Math.floor(y); },
+// });
 
   // swiper s9 
   var swiper = new Swiper('.s9', {

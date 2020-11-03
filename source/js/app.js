@@ -23,3 +23,4 @@ import {  } from './certificate-bundle';
 import {  } from './exam-details-questions';
 import {  } from './_all-providers';
 import {  } from './profile-invoices';
+import {  } from './_sticky-footer';
